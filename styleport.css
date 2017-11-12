@@ -1,0 +1,121 @@
+h1 {
+	float: left;
+	margin: 0 auto;
+	width: 30%;
+}
+
+.nav-tabs {
+	float:right;
+	width: 35%
+}
+
+ .panel-body {
+ 	margin: 0 auto;
+
+
+ }
+
+ .col-lg-4 {
+  float: right;
+ }
+
+ .col-lg-6 {
+ 	float: left;
+ 	width: 60%;
+ 	 
+ }
+ .connectport {
+ 	float: left;
+ }
+
+ .learn {
+  display: block;
+  width: 80%;
+  min-width: 50px;
+  padding: 20px;
+}
+
+/* set tile to share the row, 4 in a row, with proper display, width 25% and height to be 520px */
+.learn > li {
+  display: inline-block;
+  width: 50%;
+  height: 200px;
+  width: 200px;
+  
+}
+
+/* set tile to remove gap with margin-right:-4px; and set border 5px white and margin-bottom 10px  */
+.learn > li {
+  margin-right: -4px;
+  border: 5px solid white;
+  margin-bottom: 10px;
+}
+
+/* set background color lightgrey and vertical align top -*/
+
+.learn > li {
+  background-color: lightgrey;
+  vertical-align: top;
+}
+
+/* set image display, width to be as wide as tile */
+.portimages {
+  display: inline-block;
+  width: 50%;
+}
+
+/* set span display, width, padding and font-family sans-serif */
+span {
+  display: block;
+  width: 50%;
+  padding: 0.5em;
+  font-family: sans-serif;
+}
+
+/* set 1st span, use :nth-of-type(1), with font size 1.25em and font-weight bold */
+span:nth-of-type(1) {
+  font-size: 1.25em;
+  font-weight: light;
+}
+
+/* set 3nd span, use span:nth-of-type(3), with text-transform uppercase and color green */
+span:nth-of-type(3) {
+  text-transform: uppercase;
+  color: green;
+}
+
+
+/* place 3rd span 10px away from bottom of the tile, in next 2 steps*/
+
+/* step1, set tile postion relative - 5pts */
+.learn > li {
+  position: relative;
+}
+
+/* step2, set 3rd span, use span:nth-of-type(3) selector, position absolute and 10px bottom */
+span:nth-of-type(3) {
+  position: absolute;
+  bottom: 10px;
+}
+
+/* add > sign with span:nth-of-type(3):after selector and content property*/
+
+span:nth-of-type(3):after {
+  content: " >";
+  margin-left: 1em;
+}
+
+/* single tile row for screen size less than 499px*/
+@media (max-width: 499px) {
+
+  /* set each tile width 100% */
+  .learn > li { width: 100%; }
+}
+
+/* double tile row for screen size from 500px to 999px  */
+@media (min-width: 500px) and (max-width: 2000px) {
+
+  /* set each tile width 50% */
+  .learn > li {width: 50%; }
+}
+
