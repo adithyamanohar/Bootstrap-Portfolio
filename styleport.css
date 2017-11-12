@@ -10,28 +10,28 @@ h1 {
 }
 
  .panel-body {
- 	margin: 0 auto;
+ 	
+  float: left;
 
 
  }
 
- .col-lg-4 {
+ .col-md-4 {
   float: right;
  }
 
- .col-lg-6 {
+ .col-md-6 {
  	float: left;
  	width: 60%;
  	 
  }
- .connectport {
- 	float: left;
- }
+
 
  .learn {
   display: block;
   width: 80%;
   min-width: 50px;
+  max-width: 900px;
   padding: 20px;
 }
 
@@ -40,7 +40,7 @@ h1 {
   display: inline-block;
   width: 50%;
   height: 200px;
-  width: 200px;
+  width: 50px;
   
 }
 
@@ -104,16 +104,30 @@ span:nth-of-type(3):after {
   content: " >";
   margin-left: 1em;
 }
+.footer {
+  position: absolute;
+  
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: black;
+  color: white;
+}
 
 /* single tile row for screen size less than 499px*/
-@media (max-width: 499px) {
+@media (min-width: 640px) and (max-width: 768px) {
 
   /* set each tile width 100% */
   .learn > li { width: 100%; }
+  .connectport {
+    float: left;
+  }
+  /* Set contact me panel to bottom with a width of 100% */
+  /* Set Portfolio with a width of 100% at the top of the webpage. */
 }
 
 /* double tile row for screen size from 500px to 999px  */
-@media (min-width: 500px) and (max-width: 2000px) {
+@media (min-width: 768px) and (max-width: 2000px) {
 
   /* set each tile width 50% */
   .learn > li {width: 50%; }
